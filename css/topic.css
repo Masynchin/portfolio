@@ -1,0 +1,20 @@
+main h1 {
+    margin-top: 1rem;
+}
+
+main .pages {
+    padding: 1rem 0;
+    list-style-type: none;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+}
+
+main .pages li {
+    padding: 1rem;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid transparent;
+}
+
+main .pages li a h3 {
+    color: var(--color-page-card-heading);
+}

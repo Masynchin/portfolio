@@ -1,0 +1,133 @@
+/* Основные цвета сайта */
+html,
+html[theme="light"] {
+    --color-background: #ffffff;
+    --color-border: #e5e5e5;
+    --color-crumbs-border: #cccccc;
+    --color-crumbs-icon: #000000;
+    --color-crumbs-text: #000000;
+    --color-footer-text: #000000;
+    --color-header-contact: #000000;
+    --color-header-profile-text: #000000;
+    --color-index-page-lesson: #8a8a8a;
+    --color-link: #0969da;
+    --color-nav-background: #333333;
+    --color-nav-background-active: #666666;
+    --color-nav-text: #ffffff;
+    --color-page-paragraph: #000000;
+    --color-page-bold: #333333;
+    --color-page-card-heading: #000000;
+    --color-progress-background: #f1f1f1;
+    --color-progress-successful: #2eb72e;
+    --color-shadow: rgba(0, 0, 0, 0.1);
+    --color-summary-heading: #000000;
+    --color-summary-text: #000000;
+    --color-text-heading: #000000;
+    --color-text-logo: #000000;
+    --color-text-b: #333333;
+    --color-toggle-theme: #cccccc;
+    --color-topic-card-heading: #000000;
+}
+
+html[theme="dark"] {
+    --color-background: #1a1a1a;
+    --color-border: #4f4f4f;
+    --color-crumbs-border: #4f4f4f;
+    --color-crumbs-icon: #f1f1f1;
+    --color-crumbs-text: #f1f1f1;
+    --color-footer-text: #f1f1f1;
+    --color-header-contact: #f1f1f1;
+    --color-header-profile-text: #f1f1f1;
+    --color-index-page-lesson: #8a8a8a;
+    --color-link: #0969da;
+    --color-nav-background: #333333;
+    --color-nav-background-active: #666666;
+    --color-nav-text: #ffffff;
+    --color-page-paragraph: #f1f1f1;
+    --color-page-bold: #cbcbcb;
+    --color-page-card-heading: #f1f1f1;
+    --color-progress-background: #d4d4d4;
+    --color-progress-successful: #2eb72e;
+    --color-shadow: rgba(0, 0, 0, 0);
+    --color-summary-heading: #f1f1f1;
+    --color-summary-text: #f1f1f1;
+    --color-text-heading: #f1f1f1;
+    --color-text-logo: #f1f1f1;
+    --color-text-b: #333333;
+    --color-toggle-theme: #666666;
+    --color-topic-card-heading: #f1f1f1;
+}
+
+/* Плавная смена цвета сайта */
+html.theme-in-transition,
+html.theme-in-transition *,
+html.theme-in-transition *:before,
+html.theme-in-transition *:after {
+    transition: all 750ms !important;
+    transition-delay: 0 !important;
+}
+
+/* Шрифт без засечек по умолчанию */
+* {
+    font-family: sans-serif;
+}
+
+/* Запрет влияния <a> на стиль элементов */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* flex-column для body по умолчанию. Помогает сделать footer */
+body {
+    background-color: var(--color-background);
+    display: flex;
+    flex-direction: column;
+}
+
+/* CSS Reset. Перенял у https://www.joshwcomeau.com/css/custom-css-reset/ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}

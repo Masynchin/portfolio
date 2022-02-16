@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "Open Sans Condensed";
+    src: url("../assets/OpenSansCondensedLight.ttf") format("truetype");
+}
+
+body header header {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+body header header * {
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+body header header *:first-child {
+    margin-right: auto;
+}
+
+body header header .logo {
+    color: var(--color-text-logo);
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 1.5em;
+}
+
+body header header .contact {
+    color: var(--color-header-contact);
+}
+
+body header header .theme_toggle {
+    background: transparent;
+    display: block;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+}
+
+body header header .theme_toggle .icon {
+    margin: 0;
+    width: 24px;
+    height: 24px;
+}
+
+body header header .theme_toggle .icon g path {
+    stroke: var(--color-toggle-theme);
+}
+
+body header header .profile {
+    display: flex;
+    align-items: center;
+}
+
+body header header .profile .picture {
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+}
+
+body header header .profile .username {
+    color: var(--color-header-profile-text);
+}
+
+body header header .profile .username::first-letter {
+    color: red;
+}
+
+body header nav {
+    padding: 0 0.75rem;
+    flex: 0 0 100%;
+
+    display: flex;
+    align-items: center;
+
+    background-color: var(--color-nav-background);
+    color: var(--color-nav-text);
+
+    text-transform: uppercase;
+}
+
+body header nav * {
+    padding: 0.75rem;
+}
+
+body header nav .active,
+body header nav *:hover {
+    background-color: var(--color-nav-background-active);
+}
