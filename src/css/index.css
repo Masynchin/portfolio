@@ -115,6 +115,9 @@ main nav.pages a span {
 
 @media (max-width: 1128px) {
     main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+
         grid-template-columns: 1fr;
         grid-template-areas:
             "title"
