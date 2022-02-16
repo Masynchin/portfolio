@@ -1,0 +1,124 @@
+details {
+    max-width: 640px;
+    margin-top: 0.75rem;
+}
+
+details summary {
+    color: var(--color-summary-heading);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+details p {
+    color: var(--color-summary-text);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+main {
+    display: grid;
+    column-gap: 3rem;
+    grid-template-columns: 1fr 320px;
+    grid-template-areas:
+        "title title"
+        "topics pages";
+}
+
+main header {
+    grid-area: title;
+}
+
+main nav.topics {
+    grid-area: topics;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+main nav.topics a {
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+}
+
+main nav.topics a:hover {
+    box-shadow: 1px 1px 3px var(--color-shadow);
+}
+
+main nav.topics a h3 {
+    color: var(--color-topic-card-heading);
+}
+
+main nav.topics a progress {
+    -webkit-appearance: none;
+    appearance: none;
+
+    height: 0.5em;
+}
+
+main nav.topics a progress::-webkit-progress-bar {
+    height: 0.5em;
+    background-color: var(--color-progress-background);
+}
+
+main nav.topics a progress::-webkit-progress-value {
+    height: 0.5em;
+    background-color: var(--color-progress-successful);
+}
+
+main nav.pages {
+    grid-area: pages;
+    padding-top: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+main nav.pages h2 {
+    padding-bottom: 0.4rem;
+    font-size: 1.5em;
+}
+
+main nav.pages a {
+    padding: 0.5rem;
+    line-height: 1.4;
+
+    border-radius: 0.25rem;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    border-left: 1px solid rgba(0, 0, 0, 0);
+    border-right: 1px solid rgba(0, 0, 0, 0);
+}
+
+main nav.pages a:hover {
+    border-left: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-border);
+}
+
+main nav.pages a h3 {
+    color: var(--color-topic-card-heading);
+    font-size: 1em;
+}
+
+main nav.pages a span {
+    color: var(--color-index-page-lesson);
+    font-size: 0.9em;
+}
+
+@media (max-width: 1128px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "topics"
+            "pages";
+    }
+}

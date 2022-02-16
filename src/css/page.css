@@ -1,0 +1,24 @@
+main {
+    max-width: 640px;
+    margin: 0 auto 0 auto;
+    /* padding: 2rem 0; */
+    padding: 2rem 2rem 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main h1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+main p {
+    color: var(--color-page-paragraph);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+main p b {
+    color: var(--color-page-bold);
+}
