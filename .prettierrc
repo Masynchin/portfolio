@@ -1,8 +1,0 @@
-{
-  "bracketSpacing": true,
-  "endOfLine": "crlf",
-  "htmlWhitespaceSensitivity": "css",
-  "singleQuote": false,
-  "tabWidth": 4,
-  "useTabs": false
-}
