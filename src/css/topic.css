@@ -18,3 +18,10 @@ main .pages li {
 main .pages li a h3 {
     color: var(--color-page-card-heading);
 }
+
+@media (max-width: 1128px) {
+    main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
