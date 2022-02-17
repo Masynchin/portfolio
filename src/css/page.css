@@ -13,7 +13,8 @@ main h1 {
     margin-bottom: 1rem;
 }
 
-main p {
+main p,
+main pre {
     color: var(--color-page-paragraph);
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
@@ -21,4 +22,19 @@ main p {
 
 main p b {
     color: var(--color-page-bold);
+}
+
+main p code {
+    font-family: monospace;
+}
+
+main pre {
+    padding: 0.25rem 0.5rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+}
+
+main pre code {
+    color: var(--color-page-paragraph);
+    font-family: monospace;
 }

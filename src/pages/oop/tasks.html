@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../css/global.css" />
+        <link rel="stylesheet" href="../../css/header.css" />
+        <link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/menu.css" />
+        <link rel="stylesheet" href="../../css/footer.css" />
+        <link rel="stylesheet" href="../../css/page.css" />
+        <link rel="stylesheet" href="../../css/crumbs.css" />
+        <script src="../../js/theme.js"></script>
+        <script src="../../js/toggle.js" async></script>
+        <script src="../../js/menu.js" async></script>
+        <title>Про вступительные задания</title>
+    </head>
+
+    <body>
+        <header>
+            <header>
+                <span class="logo">Портфолио для Яндекс.Лицей</span>
+                <a class="contact" href="https://t.me/Masynchin"
+                    >Задать вопрос</a
+                >
+                <button
+                    id="theme-toggle"
+                    class="theme_toggle"
+                    aria-label="Переключить цвет темы"
+                >
+                    <svg class="icon" width="24" height="24">
+                        <g fill="none" stroke="#000" stroke-linejoin="round">
+                            <path
+                                d="M16.53 5.53a4.53 4.53 0 0 0-9.06 0v4.75l-5.18 9h19.42l-5.18-9z"
+                                stroke-linecap="round"
+                            />
+                            <path
+                                d="M10.17 19.36v1.81a1.83 1.83 0 0 0 3.66 0v-1.81"
+                            />
+                        </g>
+                    </svg>
+                </button>
+                <a class="profile" href="../me/credentials.html">
+                    <img
+                        src="../../assets/profile.jpg"
+                        alt="Аватар пользователя"
+                        class="picture"
+                    />
+                    <span class="username">Смирнов Максим</span>
+                </a>
+                <button
+                    id="menu-open"
+                    class="menu_toggle"
+                    aria-label="Открыть меню"
+                >
+                    <svg class="icon" width="14" height="16">
+                        <g fill="none" fill-rule="evenodd">
+                            <path d="M-4-5h24v24H-4z" />
+                            <path
+                                d="M0 2V0h16v2H0zm0 6V6h16v2H0zm0 6v-2h16v2H0z"
+                                fill="#000"
+                            />
+                        </g>
+                    </svg>
+                </button>
+            </header>
+
+            <nav>
+                <a href="../../index.html">На главную</a>
+            </nav>
+        </header>
+
+        <main>
+            <a class="crumbs" href="index.html">
+                <span class="icon"></span>
+                <span>к разделу</span>
+            </a>
+
+            <h1>Про вступительные задания</h1>
+            <p>
+                Я удивился, когда увидел слова Django и ООП вместе. Мне
+                интересно, как будет использоваться эта концепция вместе с
+                Django. Также будет интересно узнать, как эта концепция будет
+                рассказываться на самом курсе.
+            </p>
+            <p>
+                <b>Касательно самих заданий.</b>
+                Исключая последнее задание, все мои решения не были выполнены в
+                ООП-стиле. К сожалению, я не успел переписать их, и ожидал
+                результата отбора. Я прошёл, но хотелось узнать, насколько было
+                важно соблюдение ООП. По коду в разборе решений я понял, что оно
+                не играло роли. В качестве примера приведу правильное, на мой
+                взгляд, решение первой задачи первого варианта:
+            </p>
+            <pre><code>lines = Take(
+    5,
+    FilteredLines(
+        LinesStopAt(
+            LinesFromInput(), "Apologia sive De magia"
+        )
+    )
+)
+for line in lines:
+    print(line)</code></pre>
+            <p>
+                Я опустил требуемые классы. В основе должен лежать интерфейс
+                <code>Lines</code>, который является обёрткой для
+                <code>Iterable[str] </code>. Этот интерфейс должны реализовывать
+                <code>FilteredLines</code>, <code>LinesStopAt</code> и
+                <code>LinesFromInput</code>. <code>Take</code> должнен
+                реализовывать <code>Iterable[T]</code>, что будет подходить под
+                определение <code>Lines</code>. По моему мнению, именно так и
+                должно выглядеть ООП-решение данной задачи. И по этому решению
+                можно понять, почему мне интересно, как именно трактуется ООП в
+                данном курсе.
+            </p>
+        </main>
+
+        <aside id="menu" class="menu" hidden>
+            <header>
+                <a class="profile" href="../me/credentials.html">
+                    <img
+                        src="../../assets/profile.jpg"
+                        alt="Аватар пользователя"
+                        class="picture"
+                    />
+                </a>
+                <button id="menu-close" class="close_menu">
+                    <svg class="icon" width="24" height="24" fill="none">
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M19.207 6.207a1 1 0 0 0-1.414-1.414L12 10.586 6.207 4.793a1 1 0 0 0-1.414 1.414L10.586 12l-5.793 5.793a1 1 0 1 0 1.414 1.414L12 13.414l5.793 5.793a1 1 0 0 0 1.414-1.414L13.414 12l5.793-5.793z"
+                            fill="#fff"
+                        />
+                    </svg>
+                </button>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">На главную</a></li>
+                    <li><a href="https://t.me/Masynchin">Задать вопрос</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <footer>
+            <small>Очень важный текст в подвале страницы.</small>
+            <small
+                >© 2022 – 2022
+                <a href="https://github.com/Masynchin" class="text_link"
+                    >Max Smirnov</a
+                >
+            </small>
+        </footer>
+    </body>
+</html>
