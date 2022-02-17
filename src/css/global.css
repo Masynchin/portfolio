@@ -21,6 +21,7 @@ html[theme="light"] {
     --color-nav-background-active: #666666;
     --color-nav-text: #ffffff;
     --color-page-code-background: rgba(0, 0, 0, 0.1);
+    --color-page-image-caption: #7a7a7a;
     --color-page-paragraph: #000000;
     --color-page-bold: #333333;
     --color-page-card-heading: #000000;
@@ -57,6 +58,7 @@ html[theme="dark"] {
     --color-nav-background-active: #666666;
     --color-nav-text: #ffffff;
     --color-page-code-background: rgba(0, 0, 0, 0.1);
+    --color-page-image-caption: #7a7a7a;
     --color-page-paragraph: #f1f1f1;
     --color-page-bold: #cbcbcb;
     --color-page-card-heading: #f1f1f1;
@@ -70,6 +72,11 @@ html[theme="dark"] {
     --color-text-b: #333333;
     --color-toggle-theme: #666666;
     --color-topic-card-heading: #f1f1f1;
+}
+
+/* Защита от ослепления из-за изображений в тёмной теме */
+html[theme="dark"] img {
+    filter: brightness(0.8) contrast(1.2);
 }
 
 /* Плавная смена цвета сайта */
