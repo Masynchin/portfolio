@@ -1,7 +1,6 @@
 main {
     max-width: 640px;
     margin: 0 auto 0 auto;
-    /* padding: 2rem 0; */
     padding: 2rem 2rem 0;
 
     display: flex;
@@ -13,7 +12,8 @@ main h1 {
     margin-bottom: 1rem;
 }
 
-main p {
+main p,
+main pre {
     color: var(--color-page-paragraph);
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
@@ -21,4 +21,19 @@ main p {
 
 main p b {
     color: var(--color-page-bold);
+}
+
+main p code {
+    font-family: monospace;
+}
+
+main pre {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    background-color: var(--color-page-code-background);
+}
+
+main pre code {
+    color: var(--color-page-paragraph);
+    font-family: monospace;
 }

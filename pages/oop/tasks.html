@@ -10,12 +10,11 @@
         <link rel="stylesheet" href="../../css/menu.css" />
         <link rel="stylesheet" href="../../css/footer.css" />
         <link rel="stylesheet" href="../../css/page.css" />
-        <link rel="stylesheet" href="../../css/link.css" />
         <link rel="stylesheet" href="../../css/crumbs.css" />
         <script src="../../js/theme.js"></script>
         <script src="../../js/toggle.js" async></script>
         <script src="../../js/menu.js" async></script>
-        <title>GitHub</title>
+        <title>Про вступительные задания</title>
     </head>
 
     <body>
@@ -42,7 +41,7 @@
                         </g>
                     </svg>
                 </button>
-                <a class="profile" href="credentials.html">
+                <a class="profile" href="../me/credentials.html">
                     <img
                         src="../../assets/profile.jpg"
                         alt="Аватар пользователя"
@@ -72,39 +71,55 @@
             </nav>
         </header>
 
-        <main class="page">
+        <main>
             <a class="crumbs" href="index.html">
                 <span class="icon"></span>
                 <span>к разделу</span>
             </a>
 
-            <h1>GitHub</h1>
-            <a href="https://github.com/Masynchin" class="text_link">
-                Непосредственно ссылка.
-            </a>
+            <h1>Про вступительные задания</h1>
             <p>
-                Аккаунт на GitHub я завёл ещё на первом годе обучения в Яндекс
-                Лицее, но полноценно начал его вести несколько позже. Начал
-                выкладывать собственные проекты, смотреть чужие, изучать их код.
+                Я удивился, когда увидел слова Django и ООП вместе. Мне
+                интересно, как будет использоваться эта концепция вместе с
+                Django. Также будет интересно узнать, как эта концепция будет
+                рассказываться на самом курсе.
             </p>
             <p>
-                За это время я научился лучше оформлять собственные проекты
-                (например, недавно выпуск CLI-инструмента сопроводил
-                <a href="https://redd.it/sikfe7" class="text_link"
-                    >постом на r/Python</a
-                >), работать с чужими (делать грамотные PR, формулировать
-                issues).
+                <b>Касательно самих заданий.</b>
+                Исключая последнее задание, все мои решения не были выполнены в
+                ООП-стиле. К сожалению, я не успел переписать их, и ожидал
+                результата отбора. Я прошёл, но хотелось узнать, насколько было
+                важно соблюдение ООП. По коду в разборе решений я понял, что оно
+                не играло роли. В качестве примера приведу правильное, на мой
+                взгляд, решение первой задачи первого варианта:
             </p>
+            <pre><code>lines = Take(
+    5,
+    FilteredLines(
+        LinesStopAt(
+            LinesFromInput(), "Apologia sive De magia"
+        )
+    )
+)
+for line in lines:
+    print(line)</code></pre>
             <p>
-                Вы можете оценить мои главные проекты - они указаны в README
-                профиля. Среди них веб-приложения (на всём, кроме самого Django
-                :), боты для ТГ, CLI-утилиты, и библиотеки.
+                Я опустил требуемые классы. В основе должен лежать интерфейс
+                <code>Lines</code>, который является обёрткой для
+                <code>Iterable[str] </code>. Этот интерфейс должны реализовывать
+                <code>FilteredLines</code>, <code>LinesStopAt</code> и
+                <code>LinesFromInput</code>. <code>Take</code> должнен
+                реализовывать <code>Iterable[T]</code>, что будет подходить под
+                определение <code>Lines</code>. По моему мнению, именно так и
+                должно выглядеть ООП-решение данной задачи. И по этому решению
+                можно понять, почему мне интересно, как именно трактуется ООП в
+                данном курсе.
             </p>
         </main>
 
         <aside id="menu" class="menu" hidden>
             <header>
-                <a class="profile" href="credentials.html">
+                <a class="profile" href="../me/credentials.html">
                     <img
                         src="../../assets/profile.jpg"
                         alt="Аватар пользователя"
