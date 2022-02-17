@@ -23,6 +23,15 @@ main p b {
     color: var(--color-page-bold);
 }
 
+main figure {
+    max-width: 480px;
+    margin: 0 auto 0.5rem auto;
+}
+
+main figure figcaption {
+    color: var(--color-page-image-caption);
+}
+
 main p code {
     font-family: monospace;
 }
