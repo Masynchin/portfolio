@@ -28,24 +28,31 @@ body header header .contact {
     color: var(--color-header-contact);
 }
 
-body header header .theme_toggle {
+body header header .theme_toggle,
+body header header .menu_toggle {
     background: transparent;
     display: block;
     border: none;
     cursor: pointer;
     padding: 0;
-    width: 24px;
-    height: 24px;
 }
 
-body header header .theme_toggle .icon {
+body header header .theme_toggle .icon,
+body header header .menu_toggle .icon {
     margin: 0;
-    width: 24px;
-    height: 24px;
 }
 
 body header header .theme_toggle .icon g path {
     stroke: var(--color-toggle-theme);
+}
+
+body header header .menu_toggle .icon g path:last-child {
+    fill: var(--color-header-menu-button);
+}
+
+body header header .menu_toggle {
+    visibility: hidden;
+    display: none;
 }
 
 body header header .profile {
@@ -87,4 +94,22 @@ body header nav * {
 body header nav .active,
 body header nav *:hover {
     background-color: var(--color-nav-background-active);
+}
+
+@media (max-width: 768px) {
+    body header nav,
+    body header header .contact,
+    body header header .profile {
+        visibility: hidden;
+        display: none;
+    }
+
+    body header header .menu_toggle {
+        visibility: visible;
+        display: block;
+    }
+
+    body header header {
+        border-bottom: 1px solid var(--color-header-border);
+    }
 }

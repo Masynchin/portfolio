@@ -7,11 +7,13 @@
         <link rel="stylesheet" href="../../css/global.css" />
         <link rel="stylesheet" href="../../css/header.css" />
         <link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/menu.css" />
         <link rel="stylesheet" href="../../css/footer.css" />
         <link rel="stylesheet" href="../../css/topic.css" />
         <link rel="stylesheet" href="../../css/crumbs.css" />
         <script src="../../js/theme.js"></script>
         <script src="../../js/toggle.js" async></script>
+        <script src="../../js/menu.js" async></script>
         <title>О критериях</title>
     </head>
 
@@ -47,6 +49,21 @@
                     />
                     <span class="username">Смирнов Максим</span>
                 </a>
+                <button
+                    id="menu-open"
+                    class="menu_toggle"
+                    aria-label="Открыть меню"
+                >
+                    <svg class="icon" width="14" height="16">
+                        <g fill="none" fill-rule="evenodd">
+                            <path d="M-4-5h24v24H-4z" />
+                            <path
+                                d="M0 2V0h16v2H0zm0 6V6h16v2H0zm0 6v-2h16v2H0z"
+                                fill="#000"
+                            />
+                        </g>
+                    </svg>
+                </button>
             </header>
 
             <nav>
@@ -79,6 +96,34 @@
                 </li>
             </ul>
         </main>
+
+        <aside id="menu" class="menu" hidden>
+            <header>
+                <a class="profile" href="../me/credentials.html">
+                    <img
+                        src="../../assets/profile.jpg"
+                        alt="Аватар пользователя"
+                        class="picture"
+                    />
+                </a>
+                <button id="menu-close" class="close_menu">
+                    <svg class="icon" width="24" height="24" fill="none">
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M19.207 6.207a1 1 0 0 0-1.414-1.414L12 10.586 6.207 4.793a1 1 0 0 0-1.414 1.414L10.586 12l-5.793 5.793a1 1 0 1 0 1.414 1.414L12 13.414l5.793 5.793a1 1 0 0 0 1.414-1.414L13.414 12l5.793-5.793z"
+                            fill="#fff"
+                        />
+                    </svg>
+                </button>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">На главную</a></li>
+                    <li><a href="https://t.me/Masynchin">Задать вопрос</a></li>
+                </ul>
+            </nav>
+        </aside>
 
         <footer>
             <small>Очень важный текст в подвале страницы.</small>
