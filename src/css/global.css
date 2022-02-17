@@ -20,6 +20,7 @@ html[theme="light"] {
     --color-nav-background: #333333;
     --color-nav-background-active: #666666;
     --color-nav-text: #ffffff;
+    --color-page-code-background: rgba(0, 0, 0, 0.1);
     --color-page-paragraph: #000000;
     --color-page-bold: #333333;
     --color-page-card-heading: #000000;
@@ -55,6 +56,7 @@ html[theme="dark"] {
     --color-nav-background: #333333;
     --color-nav-background-active: #666666;
     --color-nav-text: #ffffff;
+    --color-page-code-background: rgba(0, 0, 0, 0.1);
     --color-page-paragraph: #f1f1f1;
     --color-page-bold: #cbcbcb;
     --color-page-card-heading: #f1f1f1;

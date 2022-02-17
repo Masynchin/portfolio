@@ -30,8 +30,8 @@ main p code {
 
 main pre {
     padding: 0.25rem 0.5rem;
-    background-color: rgba(0, 0, 0, 0.1);
     border-radius: 0.25rem;
+    background-color: var(--color-page-code-background);
 }
 
 main pre code {
