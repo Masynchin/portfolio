@@ -3,31 +3,33 @@
     src: url("../assets/OpenSansCondensedLight.ttf") format("truetype");
 }
 
-body header header {
+body header ul {
     padding: 1rem;
+    list-style: none;
+
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 0.75rem;
 }
 
-body header header *:first-child {
+body header ul *:first-child {
     margin-right: auto;
 }
 
-body header header .logo {
+body header ul .logo {
     color: var(--color-text-logo);
     font-family: "Open Sans Condensed", sans-serif;
     font-weight: 600;
     font-size: 1.5em;
 }
 
-body header header .contact {
+body header ul .contact {
     color: var(--color-header-contact);
 }
 
-body header header .theme_toggle,
-body header header .menu_toggle {
+body header ul .theme_toggle,
+body header ul .menu_toggle {
     background: transparent;
     display: block;
     border: none;
@@ -35,41 +37,41 @@ body header header .menu_toggle {
     padding: 0;
 }
 
-body header header .theme_toggle .icon,
-body header header .menu_toggle .icon {
+body header ul .theme_toggle .icon,
+body header ul .menu_toggle .icon {
     margin: 0;
 }
 
-body header header .theme_toggle .icon g path {
+body header ul .theme_toggle .icon g path {
     stroke: var(--color-toggle-theme);
 }
 
-body header header .menu_toggle .icon g path:last-child {
+body header ul .menu_toggle .icon g path:last-child {
     fill: var(--color-header-menu-button);
 }
 
-body header header .menu_toggle {
+body header ul .menu_toggle {
     visibility: hidden;
     display: none;
 }
 
-body header header .profile {
+body header ul .profile {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-body header header .profile .picture {
+body header ul .profile .picture {
     width: 44px;
     height: 44px;
     border-radius: 100%;
 }
 
-body header header .profile .username {
+body header ul .profile .username {
     color: var(--color-header-profile-text);
 }
 
-body header header .profile .username::first-letter {
+body header ul .profile .username::first-letter {
     color: red;
 }
 
@@ -97,18 +99,18 @@ body header nav *:hover {
 
 @media (max-width: 768px) {
     body header nav,
-    body header header .contact,
-    body header header .profile {
+    body header ul .contact,
+    body header ul .profile {
         visibility: hidden;
         display: none;
     }
 
-    body header header .menu_toggle {
+    body header ul .menu_toggle {
         visibility: visible;
         display: block;
     }
 
-    body header header {
+    body header ul {
         border-bottom: 1px solid var(--color-header-border);
     }
 }
