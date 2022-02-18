@@ -8,8 +8,6 @@
 
     border: 1px solid var(--color-crumbs-border);
     border-radius: 2rem;
-
-    color: var(--color-crumbs-text);
 }
 
 .crumbs .icon {
@@ -20,4 +18,8 @@
 
 .crumbs .icon path {
     fill: var(--color-crumbs-icon);
+}
+
+.crumbs span {
+    color: var(--color-crumbs-text);
 }
