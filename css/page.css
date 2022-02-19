@@ -1,5 +1,6 @@
 main {
     max-width: 640px;
+    width: 100%;
     margin: 0 auto 0 auto;
     padding: 2rem 2rem 0;
 
@@ -33,16 +34,17 @@ main figure figcaption {
 }
 
 main p code {
-    font-family: monospace;
+    font-family: "Cascadia Mono", monospace;
 }
 
 main pre {
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
+    overflow-x: auto;
     background-color: var(--color-page-code-background);
 }
 
 main pre code {
     color: var(--color-page-paragraph);
-    font-family: monospace;
+    font-family: "Cascadia Mono", monospace;
 }
