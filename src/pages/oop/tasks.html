@@ -110,27 +110,34 @@
                 не играло роли. В качестве примера приведу правильное, на мой
                 взгляд, решение первой задачи первого варианта:
             </p>
-            <pre><code>lines = Take(
-    5,
-    FilteredLines(
-        LinesStopAt(
-            LinesFromInput(), "Apologia sive De magia"
-        )
+            <pre><code>List(
+    RedirectTo(
+        Take(
+            FilteredLines(
+                LinesStopAt(
+                    LinesFromInput(),
+                    "Apologia sive De magia",
+                )
+            ),
+            5,
+        ),
+        sys.stdin
     )
-)
-for line in lines:
-    print(line)</code></pre>
+)</code></pre>
             <p>
-                Я опустил требуемые классы. В основе должен лежать интерфейс
+                Я опустил создание требуемых классов. В основе должен лежать
+                интерфейс
                 <code>Lines</code>, который является обёрткой для
                 <code>Iterable[str] </code>. Этот интерфейс должны реализовывать
                 <code>FilteredLines</code>, <code>LinesStopAt</code> и
-                <code>LinesFromInput</code>. <code>Take</code> должнен
-                реализовывать <code>Iterable[T]</code>, что будет подходить под
-                определение <code>Lines</code>. По моему мнению, именно так и
-                должно выглядеть ООП-решение данной задачи. И по этому решению
-                можно понять, почему мне интересно, как именно трактуется ООП в
-                данном курсе.
+                <code>LinesFromInput</code>. <code>Take</code>,
+                <code>RedirectTo</code> и <code>List</code> (встроенный
+                <code>list</code>) должны реализовывать интерфейс
+                <code>Iterable[T]</code>, что будет подходить под определение
+                <code>Lines</code>. По моему мнению, именно так и должно
+                выглядеть ООП-решение данной задачи. И по этому решению можно
+                понять, почему мне интересно, как именно трактуется ООП в данном
+                курсе.
             </p>
         </main>
 
