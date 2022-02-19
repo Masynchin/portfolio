@@ -34,7 +34,7 @@ main figure figcaption {
 }
 
 main p code {
-    font-family: monospace;
+    font-family: "Cascadia Mono", monospace;
 }
 
 main pre {
@@ -46,5 +46,5 @@ main pre {
 
 main pre code {
     color: var(--color-page-paragraph);
-    font-family: monospace;
+    font-family: "Cascadia Mono", monospace;
 }
