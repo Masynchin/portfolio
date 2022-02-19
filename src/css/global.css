@@ -85,7 +85,7 @@ html.theme-in-transition *,
 html.theme-in-transition *:before,
 html.theme-in-transition *:after {
     transition: all 750ms !important;
-    transition-delay: 0 !important;
+    transition-delay: 0s !important;
 }
 
 /* Шрифт без засечек по умолчанию */
