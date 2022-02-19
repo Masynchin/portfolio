@@ -43,7 +43,7 @@ body header ul .menu_toggle .icon {
 }
 
 body header ul .theme_toggle .icon g path {
-    stroke: var(--color-toggle-theme);
+    fill: var(--color-toggle-theme);
 }
 
 body header ul .menu_toggle .icon g path:last-child {
